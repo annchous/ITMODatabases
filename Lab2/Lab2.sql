@@ -81,9 +81,9 @@ HAVING COUNT(SalesOrderID) in (3, 5)
 ORDER BY ProductID ASC
 
 SELECT ProductSubcategoryID
-FROM Production.ProductSubcategory
+FROM Production.Product
 GROUP BY ProductSubcategoryID
-HAVING COUNT(Name) > 10
+HAVING COUNT(*) > 10
 ORDER BY ProductSubcategoryID ASC
 
 SELECT ProductID
