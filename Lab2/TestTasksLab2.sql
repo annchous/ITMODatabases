@@ -50,8 +50,9 @@ ORDER BY COUNT(DISTINCT[Color]) DESC
 /* Task 9 */
 SELECT ProductID
 FROM Sales.SalesOrderDetail
-GROUP BY ProductID, OrderQty, SalesOrderID
-HAVING OrderQty < 3 AND COUNT(DISTINCT[SalesOrderID]) > 3
+WHERE OrderQty < 3
+GROUP BY ProductID
+HAVING COUNT(DISTINCT[SalesOrderID]) > 3
 
 /* Task 10 */
 SELECT TOP 1 ProductCategoryID, COUNT(ProductSubcategoryID) AS 'Count'
